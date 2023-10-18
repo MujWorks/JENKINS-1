@@ -7,7 +7,11 @@ pipeline{
     stages{
         stage('Deploy to Remote'){
             steps{
-                sh 'scp -r ${WORKSPACE}/* root@${staging_server}:/var/www/html/testapp/'
+                // For DIfferent machine
+                //sh 'scp -r ${WORKSPACE}/* root@${staging_server}:/var/www/html/testapp/'
+
+                // Use 'cp' to copy files within the same machine
+                sh 'cp -r ${WORKSPACE}/* /var/www/html/testapp/'
             }
         }
     }
