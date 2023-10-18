@@ -16,6 +16,9 @@ pipeline{
                     // Check if the directory exists
                     def dirExists = sh(script: "[ -d ${remoteDir} ] && echo 'true' || echo 'false'", returnStatus: true).trim()
                     
+                    // Convert the result to a string
+                    def dirExistsString = dirExists.toString()
+
                     if (dirExists == "false") {
                         // Directory doesn't exist, create it
                         sh "mkdir -p ${remoteDir}"
