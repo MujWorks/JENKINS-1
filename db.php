@@ -2,8 +2,10 @@
 function dbConnect() {
     $db = "testdb";
     $host = "localhost";
-    $user = "root";
-    $pass = "";
+    //$user = "root";
+    //$pass = "";
+    $user = "testadmin";
+    $pass = "testadminpass";
 
     return new mysqli($host, $user, $pass, $db);
 }
