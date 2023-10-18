@@ -17,7 +17,7 @@ pipeline{
 
                     
                         //  create directory
-                        sh "mkdir -p ${remoteDir}"
+                        sh "sudo mkdir -p ${remoteDir}"
                     
                     
                     // Now, copy the files
