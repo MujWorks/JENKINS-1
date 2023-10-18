@@ -13,9 +13,6 @@ pipeline{
                 script {
                     def remoteDir = "/var/www/html/testapp/"
                     
-                    
-
-                    
                         //  create directory
                         sh "sudo mkdir -p ${remoteDir}"
                     
