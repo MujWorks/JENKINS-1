@@ -13,16 +13,12 @@ pipeline{
                 script {
                     def remoteDir = "/var/www/html/testapp/"
                     
-                    // Check if the directory exists
-                    def dirExists = sh(script: "[ -d ${remoteDir} ] && echo 'true' || echo 'false'", returnStatus: true).trim()
                     
-                    // Convert the result to a string
-                    def dirExistsString = dirExists.toString()
 
-                    if (dirExists == "false") {
-                        // Directory doesn't exist, create it
+                    
+                        //  create directory
                         sh "mkdir -p ${remoteDir}"
-                    }
+                    
                     
                     // Now, copy the files
                     sh "cp -r ${WORKSPACE}/* ${remoteDir}"
