@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        staging_server="64.227.149.44"
+        staging_server="157.230.216.247"
     }
 
     stages{
