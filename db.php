@@ -19,7 +19,7 @@ function insertMessage($post) {
 
     $conn = dbConnect();
 
-    $query = "insert into messages(ID, Name, Email, Phone, Message) values (NULL, 
+    $query = "insert into messages( Name, Email, Phone, Message) values ( 
                 '$txtName', '$txtEmail', '$txtPhone', '$txtMessage')";
     
     $res = $conn->query($query);
