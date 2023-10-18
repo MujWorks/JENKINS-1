@@ -23,6 +23,8 @@ if(isset($_GET["send"]) && $_GET["send"] == 1) {
     insertMessage($_POST);
 } 
 
+echo "<hr>Below is our tablem - okay";
+
 printMessages();
 
 echo "<hr>Enter data into the form to insert to database";
