@@ -17,15 +17,15 @@ pipeline{
 
                     
                         //  create directory
-                        sh "sudo mkdir -p ${remoteDir}"
+                        sh "mkdir -p ${remoteDir}"
                     
                     
                     // Now, copy the files
-                    sh "sudo cp -r ${WORKSPACE}/* ${remoteDir}"
+                    sh "cp -r ${WORKSPACE}/* ${remoteDir}"
 
                     // Set permissions for the Jenkins user
-                    sh "sudo chown -R jenkins:jenkins ${remoteDir}"
-                    sh "sudo chmod -R 755 ${remoteDir}"
+                    sh "chown -R jenkins:jenkins ${remoteDir}"
+                    sh "chmod -R 755 ${remoteDir}"
                 }
             }
         }
