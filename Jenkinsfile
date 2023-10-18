@@ -24,8 +24,8 @@ pipeline{
                     sh "sudo cp -r ${WORKSPACE}/* ${remoteDir}"
 
                     // Set permissions for the Jenkins user
-                    sh "chown -R jenkins:jenkins ${remoteDir}"
-                    sh "chmod -R 755 ${remoteDir}"
+                    sh "sudo chown -R jenkins:jenkins ${remoteDir}"
+                    sh "sudo chmod -R 755 ${remoteDir}"
                 }
             }
         }
