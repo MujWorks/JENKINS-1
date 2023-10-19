@@ -23,7 +23,7 @@ if(isset($_GET["send"]) && $_GET["send"] == 1) {
     insertMessage($_POST);
 } 
 
-echo "<hr>Below is our table - 5";
+echo "<hr>Below is our table - 6";
 
 printMessages();
 
